@@ -1,5 +1,5 @@
 
-function [FailureRate Rank Mymat]=SRA(Data,Algorithms,Functions,AlgorithmNames,alpha,Beta,FunctionGroup)
+function [P_value h FailureRate Rank Mymat]=SRA(Data,Algorithms,Functions,AlgorithmNames,alpha,Beta,FunctionGroup)
 
 
 if nargin<1
@@ -36,7 +36,7 @@ AdaptiveBeta=Beta.*sum(N)./N;
 
 
 
-
+P_values=[];
 mat=zeros(NA);
 Mymat.mat=zeros(NA);
 l=1;
@@ -55,6 +55,7 @@ for i=[ Algorithms(1:end-1)]
     Mymat.Name(ii)={AlgorithmNames(i)};
     Mymat.mat(ii,jj)=W+k/2;
     Mymat.mat(jj,ii)=L+k/2;
+    P_values=[P_values P_valueCalculater(W,L,k,alpha)]; %Eq.14
      jj1=jj;
     for jj=jj1
         if  Mymat.mat(ii,jj)> Mymat.mat(jj,ii)
@@ -71,7 +72,25 @@ end
 FailureRate=sum(mat);
 [k1 id]=sort(FailureRate);
 [f Rank]=sort(id);
+P_value= combine_pvalues( P_values); %Eqs. 15-16
+h=1;
+if P_value<alpha
+    h=0;
+end
+end
+function [p_combined]=combine_pvalues(p_values)
+X2 = -2 * sum(log(p_values)); %Eq. 15
+df = 2 * length(p_values);
+p_combined = chi2cdf(X2, df,'upper'); %Eq. 16
 
+end
+function P_value=P_valueCalculater(W,L,k,alpha)
+for i=1:numel(W)
+a=[ones(1,W(i)), 2*ones(1,L(i)), 1.5*ones(1,k(i))];
+b=[2*ones(1,W(i)), ones(1,L(i)), 1.5*ones(1,k(i))];
+
+P_value(i)=signrank(a,b,'alpha',alpha);
+end
 end
 function [Winner Failure P_values L]=WHX(Data,myMID,ComparedMID,F_index,alpha,AdaptiveBeta,FunctionGroup)
 % for alg=[]
