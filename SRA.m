@@ -85,6 +85,7 @@ p_combined = chi2cdf(X2, df,'upper'); %Eq. 16
 
 end
 function P_value=P_valueCalculater(W,L,k,alpha)
+W=round(W);L=round(L);k=round(k);
 for i=1:numel(W)
 a=[ones(1,W(i)), 2*ones(1,L(i)), 1.5*ones(1,k(i))];
 b=[2*ones(1,W(i)), ones(1,L(i)), 1.5*ones(1,k(i))];
@@ -162,3 +163,4 @@ if numel(x)<30
 end
 x(31:end)=[];
 end
+
