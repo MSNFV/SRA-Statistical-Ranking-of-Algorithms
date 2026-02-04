@@ -6,7 +6,8 @@ Nuanced Algorithm Selection: A Comprehensive Comparative Study of Evolutionary, 
 Authors:
 Najibeh Farzi-Veijouyeh, Mohammad-Reza Feizi-Derakhshi
 
-Cite this article
+Cite this article:
+
 Farzi-Veijouyeh, N., Feizi-Derakhshi, MR. A Comprehensive Comparative Study of Evolutionary, Swarm Intelligence, and Physics/Mathematics-Based Optimization Algorithms by the Novel SRA Algorithm. Arch Computat Methods Eng (2026). https://doi.org/10.1007/s11831-025-10472-9
 
 📘 Overview
