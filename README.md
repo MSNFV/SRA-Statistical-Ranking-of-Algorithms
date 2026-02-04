@@ -1,7 +1,7 @@
 📊 Statistical Ranking of Algorithms (SRA)
 
 Paper Title:
-Nuanced Algorithm Selection: A Comprehensive Comparative Study of Evolutionary, Swarm Intelligence, and Physics/Mathematics-Based Optimization Algorithms
+A Comprehensive Comparative Study of Evolutionary, Swarm Intelligence, and Physics/Mathematics-Based Optimization Algorithms by the Novel SRA Algorithm
 
 Authors:
 Najibeh Farzi-Veijouyeh, Mohammad-Reza Feizi-Derakhshi
