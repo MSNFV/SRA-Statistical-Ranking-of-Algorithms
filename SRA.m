@@ -1,3 +1,6 @@
+% Farzi-Veijouyeh, N., Feizi-Derakhshi, MR. A Comprehensive Comparative Study of Evolutionary, Swarm Intelligence, 
+% and Physics/Mathematics-Based Optimization Algorithms by the Novel SRA Algorithm. Arch Computat Methods Eng (2026). 
+% https://doi.org/10.1007/s11831-025-10472-9
 
 function [P_value h FailureRate Rank Mymat]=SRA(Data,Algorithms,Functions,AlgorithmNames,alpha,Beta,FunctionGroup)
 
@@ -163,4 +166,5 @@ if numel(x)<30
 end
 x(31:end)=[];
 end
+
 
