@@ -99,10 +99,7 @@ The script outputs a ranked list of algorithms with statistical significance tes
 
 If you use this code or method in your research, please cite:
 
-Najibeh Farzi-Veijouyeh, Mohammad-Reza Feizi-Derakhshi.
-Nuanced Algorithm Selection: A Comprehensive Comparative Study of Evolutionary, Swarm Intelligence, and Physics/Mathematics-Based Optimization Algorithms.
-Archives of Computational Methods in Engineering, 2025.
-DOI: [To be assigned]
+Farzi-Veijouyeh, N., Feizi-Derakhshi, MR. A Comprehensive Comparative Study of Evolutionary, Swarm Intelligence, and Physics/Mathematics-Based Optimization Algorithms by the Novel SRA Algorithm. Arch Computat Methods Eng (2026). https://doi.org/10.1007/s11831-025-10472-9 
 
 📧 Contact
 
